@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+    <script src="script.js" defer></script>
+    <title>Hangman</title>
+  </head>
+  <body>
+    <section class="select">
+      <h1 class="title">HANGMAN GAME</h1>
+      <h1>Select the category you want to play!</h1>
+      <div class="buttons">
+        <button value="0">Programming</button>
+        <button value="1">Animals</button>
+        <button value="2">States</button>
+        <button value="3">City</button>
+      </div>
+    </section>
+    <h1 class="category"></h1>
+    <section class="section hide">
+      <div class="hangman">
+        <div class="hanger">
+          <div class="hang one"></div>
+          <div class="hang two"></div>
+          <div class="hang three"></div>
+        </div>
+        <div class="person">
+          <div class="knot"></div>
+          <div class="head"></div>
+          <div class="torso"></div>
+          <div class="left-arm"></div>
+          <div class="right-arm"></div>
+          <div class="left-leg"></div>
+          <div class="right-leg"></div>
+        </div>
+      </div>
+      <div class="guess">
+        <h1 class="final">Guess The Word!</h1>
+        <h1 class="word"></h1>
+        <div class="keyboard"></div>
+        <div class="wrong">
+          <h1 class="wrongGuess">Wrong Guesses: 0</h1>
+          <button class="restart">Restart Game</button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: #e1fffc;
+}
+
+body {
+  background-image: linear-gradient(to right, #13f5e1, #00e6eb, #00d6f1, #00c5f1, #12b3eb);
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.select {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  align-items: center;
+  padding-top: 140px;
+  background-image: linear-gradient(to right, #13f5e1, #00e6eb, #00d6f1, #00c5f1, #12b3eb);
+  color: rgb(240, 240, 240);
+}
+.select h1 {
+  font-size: 28px;
+}
+.select .title {
+  font-size: 52px;
+  letter-spacing: 3px;
+}
+.select .buttons {
+  max-width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+}
+.select .buttons button {
+  height: 50px;
+  width: 200px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  border: 3px solid #e1fffc;
+  border-radius: 8px;
+  color: #00e6eb;
+  background-color: #e1fffc;
+  transition: 0.15s ease-in;
+  outline: #00e6eb;
+}
+.select .buttons button:hover {
+  color: #e1fffc;
+  background-image: linear-gradient(to right, #13f5e1, #00e6eb, #00d6f1, #00c5f1, #12b3eb);
+}
+
+.section {
+  width: 90%;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.hangman {
+  width: 300px;
+  height: 500px;
+}
+.hangman .hanger {
+  display: none;
+  position: relative;
+  width: 250px;
+  height: 100%;
+}
+.hangman .hanger .hang {
+  background: #e1fffc;
+}
+.hangman .hanger .hang.one {
+  position: absolute;
+  width: 250px;
+  height: 20px;
+  bottom: 0;
+}
+.hangman .hanger .hang.two {
+  position: absolute;
+  width: 20px;
+  height: 100%;
+}
+.hangman .hanger .hang.three {
+  position: absolute;
+  width: 200px;
+  height: 20px;
+}
+.hangman .person {
+  position: relative;
+  width: 200px;
+  height: 400px;
+  top: -100%;
+  left: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hangman .person .knot {
+  display: none;
+  width: 10px;
+  height: 100px;
+  background: #e1fffc;
+}
+.hangman .person .head {
+  display: none;
+  width: 90px;
+  height: 90px;
+  border: 10px solid #e1fffc;
+  border-radius: 50%;
+  background: transparent;
+}
+.hangman .person .torso {
+  display: none;
+  height: 120px;
+  width: 10px;
+  background: #e1fffc;
+}
+.hangman .person .left-arm {
+  display: none;
+  position: absolute;
+  top: 200px;
+  left: 65px;
+  height: 80px;
+  width: 10px;
+  transform: rotate(45deg);
+  background: #e1fffc;
+}
+.hangman .person .right-arm {
+  display: none;
+  position: absolute;
+  top: 200px;
+  right: 65px;
+  height: 80px;
+  width: 10px;
+  transform: rotate(-45deg);
+  background: #e1fffc;
+}
+.hangman .person .left-leg {
+  display: none;
+  position: absolute;
+  top: 290px;
+  left: 65px;
+  height: 80px;
+  width: 10px;
+  transform: rotate(45deg);
+  background: #e1fffc;
+}
+.hangman .person .right-leg {
+  display: none;
+  position: absolute;
+  top: 290px;
+  right: 65px;
+  height: 80px;
+  width: 10px;
+  transform: rotate(-45deg);
+  background: #e1fffc;
+}
+
+.category {
+  text-align: center;
+  font-size: 48px;
+}
+
+.guess {
+  position: relative;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+  gap: 40px;
+  flex-direction: column;
+  align-items: center;
+}
+.guess .final {
+  font-size: 28px;
+}
+.guess .word {
+  font-size: 32px;
+}
+.guess .keyboard {
+  max-width: 100%;
+  height: 200px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.guess .keyboard .letter {
+  height: 60px;
+  width: 40px;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #222;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.guess .keyboard .letter:hover {
+  background: rgb(188, 227, 236);
+}
+.guess .wrong {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.guess .wrong .restart {
+  cursor: pointer;
+  height: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  border: 2px solid #e1fffc;
+  border-radius: 8px;
+  color: #00e6eb;
+  transition: 0.2s ease-in;
+}
+.guess .wrong .restart:hover {
+  color: #e1fffc;
+  background-image: linear-gradient(to right, #13f5e1, #00e6eb, #00d6f1, #00c5f1, #12b3eb);
+}
+
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+.correct {
+  color: #e1fffc;
+  background-color: rgb(39, 245, 42);
+}
+.correct:hover {
+  background-color: rgb(30, 199, 33);
+}
+
+@media (max-width: 1000px) {
+  .hangman {
+    transform: scale(0.8);
+  }
+}/*# sourceMappingURL=main.css.map */
